@@ -1,6 +1,13 @@
 version: "3.7"
 
 services:
+  cayley:
+    image: cayleygraph/cayley
+    restart: always
+    # needs volumes
+    ports:
+      - 64210:64210
+
   postgres:
     image: postgres:13-alpine
     restart: always
